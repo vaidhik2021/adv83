@@ -17,6 +17,7 @@ if(width < 992)
     document.getElementById("myCanvas").height = new_height;
     document.body.style.overflow = "hidden";
 }
+canvas.addEventListener("touchstart", my_touchstart);
 
 function my_touchstart(e)
 {
@@ -26,6 +27,7 @@ function my_touchstart(e)
     last_position_of_y = e.touches[0].clientY - canvas.offsetTop;
 
 }
+canvas.addEventListener("touchmove", my_touchmove);
 
 function my_touchmove(e)
 {
